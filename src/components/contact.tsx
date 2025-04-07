@@ -3,7 +3,8 @@
 import Button from "./button";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useEffect, useState } from "react";
-import { sendMail } from "@/lib/send-email";
+import { kMaxLength } from "buffer";
+// import { sendMail } from "@/lib/send-email";
 
 type Inputs = {
     name: string,
@@ -23,7 +24,7 @@ const Contact = () => {
     })
     const onSubmit: SubmitHandler<Inputs> = (data) => {
         // Handle proper submit here
-        sendMail({from: "no-reply@goldskill.pl", to: "GoldSkill.TradeGroup@gmail.com",subject: "Formularz kontaktowy od GoldSkill", type: "contact", message: data.message, Contactemail: data.email, name: data.name})
+        // sendMail({from: "no-reply@goldskill.pl", to: "GoldSkill.TradeGroup@gmail.com",subject: "Formularz kontaktowy od GoldSkill", type: "contact", message: data.message, Contactemail: data.email, name: data.name})
         console.log(data);
         reset()    
     };
@@ -42,9 +43,9 @@ const Contact = () => {
         },
         email: {
             required: "To pole jest wymagane",
-            pattern: {
-                value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                message: "Proszę podać poprawny adres email"
+            maxLength: {
+                value: 40,
+                message: "Email / numer telefonu nie może mieć więcej niż 40 znaków"
             }
         },
         message: {
@@ -73,7 +74,7 @@ const Contact = () => {
         <div className="mt-12 min-w-[90%] md:min-w-[50%]">
             <form className="flex items-start justify-center flex-col gap-8" onSubmit={handleSubmit(onSubmit)}>
                 <div className="sm:col-span-2 text-center min-w-[50%]">
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 ">Nazwa</label>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 ">Imię i nazwisko / Nazwa firmy</label>
                     <div className="mt-2">
                         <input autoComplete="name" type="text" id="name" {...register("name", validations.name)} className="border border-gray-300 block w-full rounded-md py-3 px-4 shadow-sm focus:border-sky-500 focus:ring-sky-500" />
                         <span className="text-red-600">
@@ -82,9 +83,9 @@ const Contact = () => {
                     </div>
                 </div>
                 <div className="sm:col-span-2 min-w-[50%]">
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 ">Email</label>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 ">Email / Numer telefonu</label>
                     <div className="mt-2">
-                        <input {...register("email", validations.email)} id="email"  type="email" autoComplete="email" className="border border-gray-300 block w-full rounded-md py-3 px-4 shadow-sm focus:border-sky-500 focus:ring-sky-500 " />
+                        <input {...register("email", validations.email)} id="email"  type="text" autoComplete="email" className="border border-gray-300 block w-full rounded-md py-3 px-4 shadow-sm focus:border-sky-500 focus:ring-sky-500 " />
                         <span className="text-red-600">
                             {errors?.email && errors.email.message}
                         </span>
@@ -101,7 +102,7 @@ const Contact = () => {
                 </div>
                 <div className="flex justify-end sm:col-span-2">
                     <Button type="submit" width="12rem">
-                        Wyślij wiadomość
+                        Uzyskaj wycenę
                     </Button>
                 </div>
                 { showAlert &&

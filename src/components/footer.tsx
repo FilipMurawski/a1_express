@@ -9,15 +9,15 @@ const Footer = ({type}: {type: "front" | "panel"}): React.ReactNode => {
   <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
     <div className="sm:col-span-2">
       <a href="#start" aria-label="Go home" title="Company" className="inline-flex items-center">
-        <Image className="w-12 h-12 mr-4" src="/Logo Biel.jpg" alt="Logo Goldskill" width={48} height={48}/>
-        <Header size="big">GoldSkill</Header>
+        <Image className="w-12 h-12 mr-4" src="/logo.jpg" alt="Logo Goldskill" width={48} height={48}/>
+        <Header size="big">A1 Express</Header>
       </a>
       <div className="mt-6 lg:max-w-sm">
         <p className="text-sm text-gray-800">
-         Miejsce, które łączy wiedzę, pasję i doświadczenie, by wspierać Cię w Twojej inwestycyjnej podróży.
+         Jakiś fajny tekst
         </p>
         <p className="mt-4 text-sm text-gray-800">
-        Społeczność traderów i edukatorów na najwyższym poziomie.
+        Jakiś kolejny fajny tekst?
         </p>
       </div>
     </div>
@@ -37,7 +37,7 @@ const Footer = ({type}: {type: "front" | "panel"}): React.ReactNode => {
     </div>
     <div>
       <p className="mt-4 text-sm text-gray-500">
-        Jakiś fajny tekst
+        Jakieś socjale?
       </p>
     </div>
   </div>
