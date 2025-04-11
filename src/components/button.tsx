@@ -18,12 +18,11 @@ const Button = ({
       {reference ? (
         <a
           href={reference}
-          className="font-medium text-center py-2 my-3 flex items-center justify-center hover:text-white transition-colors duration-300 uppercase rounded-xl"
+          className="font-medium text-center py-2 my-3 flex items-center justify-center hover:text-[var(--buton-hover-color)] transition-colors duration-400 uppercase rounded-xl"
           type={type}
           style={{
             width: typeof width === "number" ? `${width}px` : width,
             background: "linear-gradient(to bottom, var(--primary-color), var(--primary-color-dark))",
-            color: "var(--foreground)",
           }}
         >
           {children}
@@ -31,12 +30,11 @@ const Button = ({
       ) : (
         <button
           onClick={onClick}
-          className="font-medium text-center py-2 my-3 flex items-center justify-center hover:text-white transition-colors duration-300 uppercase rounded-xl"
+          className="font-medium text-center py-2 my-3 flex items-center justify-center hover:text-[var(--buton-hover-color)] transition-colors duration-400 uppercase rounded-xl"
           type={type}
           style={{
             width: typeof width === "number" ? `${width}px` : width,
             background: "linear-gradient(to bottom, var(--primary-color), var(--primary-color-dark))",
-            color: "var(--foreground)",
           }}
         >
           {children}

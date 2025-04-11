@@ -5,10 +5,9 @@ declare type header = {
 
 export const headers: header[] = [
   { title: "Strona główna", id: "home" },
-    { title: "O nas", id: "start" },
+    { title: "O nas", id: "dlaczego" },
     { title: "Nasze usługi", id: "offer" },
-    { title: "Flota", id: "team" },
-    { title: "Dlaczego", id: "why" },
+    { title: "Flota", id: "flota" },
     { title: "Dane kontaktowe", id: "kontakt" },
     { title: "Formularz kontaktowy", id: "form" },
 ]

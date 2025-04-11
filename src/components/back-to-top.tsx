@@ -13,12 +13,16 @@ const BackToTop = () => {
 
     return (
         <div
-            className="fixed bottom-8 right-8 transition-opacity duration-300 z-[30]"
+            className="fixed bottom-8 right-8 transition-opacity duration-300 z-[30] "
             style={{ opacity: scroll > 20 ? 1 : 0, pointerEvents: scroll > 20 ? "auto" : "none" }}
         >
             <button
-                className="bg-gradient-to-b from-yellow-500 to-yellow-700 font-medium text-center text-black hover:text-white transition-colors duration-300 rounded-full w-10 h-10 flex items-center justify-center"
+                className="font-medium text-center text-[var(--primary-text-color)] hover:text-[var(--buton-hover-color)] transition-colors duration-300 rounded-full w-10 h-10 flex items-center justify-center cursor-pointer"
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                style={{
+                    background: "linear-gradient(to bottom, var(--primary-color), var(--primary-color-dark))",
+                }            
+                }
             >
                 <svg
                     className="w-6 h-6"

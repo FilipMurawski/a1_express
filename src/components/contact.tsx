@@ -3,13 +3,14 @@
 import Button from "./button";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useEffect, useState } from "react";
-import { kMaxLength } from "buffer";
 // import { sendMail } from "@/lib/send-email";
 
 type Inputs = {
     name: string,
     email: string,
-    message: string
+    message: string,
+    marketing: boolean,
+    trade: boolean
 }
 
 const Contact = () => {
@@ -58,6 +59,13 @@ const Contact = () => {
                 value: 500,
                 message: "Wiadomość nie może mieć więcej niż 500 znaków"
             }
+        },
+        trade: {
+            required: "Zgoda na przetwarzanie danych osobowych jest wymagana, abyśmy mogli się z Tobą skontaktować",
+            validate: (value:boolean) => value === true || "Zgoda na przetwarzanie danych osobowych jest wymagana, abyśmy mogli się z Tobą skontaktować"
+        },
+        marketing: {
+            required: "Zgoda marketingowa jest wymagana, abyśmy mogli się z Tobą skontaktować w przyszłości",
         }
     }
     useEffect(()=> {
@@ -71,10 +79,10 @@ const Contact = () => {
     }, [isSubmitSuccessful])
     
     return (
-        <div className="pt-18 min-w-[90%] md:min-w-[50%]">
+        <div className="min-w-[90%] md:min-w-[50%]">
             <form className="flex items-start justify-center flex-col gap-8" onSubmit={handleSubmit(onSubmit)}>
                 <div className="sm:col-span-2 text-center min-w-[50%]">
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 ">Imię i nazwisko / Nazwa firmy</label>
+                    <label htmlFor="name" className="block text-start text-sm font-medium text-[var(--secondary-header-color)] ">Imię i nazwisko / Nazwa firmy</label>
                     <div className="mt-2">
                         <input autoComplete="name" type="text" id="name" {...register("name", validations.name)} className="border border-gray-300 block w-full rounded-md py-3 px-4 shadow-sm focus:border-sky-500 focus:ring-sky-500" />
                         <span className="text-red-600">
@@ -83,7 +91,7 @@ const Contact = () => {
                     </div>
                 </div>
                 <div className="sm:col-span-2 min-w-[50%]">
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 ">Email / Numer telefonu</label>
+                    <label htmlFor="email" className="block text-sm text-start font-medium text-[var(--secondary-header-color)] ">Email / Numer telefonu</label>
                     <div className="mt-2">
                         <input {...register("email", validations.email)} id="email"  type="text" autoComplete="email" className="border border-gray-300 block w-full rounded-md py-3 px-4 shadow-sm focus:border-sky-500 focus:ring-sky-500 " />
                         <span className="text-red-600">
@@ -92,7 +100,7 @@ const Contact = () => {
                     </div>
                 </div>
                 <div className="sm:col-span-2 w-[100%]">
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 ">Wiadomość</label>
+                    <label htmlFor="message" className="block text-sm text-start font-medium text-[var(--secondary-header-color)] ">Wiadomość</label>
                     <div className="mt-2">
                         <textarea {...register("message", validations.message)}  id="message" rows={4} className="border border-gray-300 block w-full rounded-md py-3 px-4 shadow-sm focus:border-sky-500 focus:ring-sky-500 " />
                         <span className="text-red-600">
@@ -100,6 +108,38 @@ const Contact = () => {
                         </span>
                     </div>
                 </div>
+                <div className="sm:col-span-2 w-[100%]">
+  <div className="mt-2 flex items-center gap-2">
+    <input
+      {...register("trade", validations.trade)}
+      id="trade"
+      type="checkbox"
+      className="border border-gray-300 rounded-md shadow-sm focus:border-sky-500 focus:ring-sky-500"
+    />
+    <label htmlFor="trade" className="text-sm font-medium text-[var(--secondary-header-color)]">
+      Oświadczam, że wyrażam zgodę na otrzymywanie informacji handlowych *
+    </label>
+  </div>
+  <span className="text-red-600">
+    {errors?.trade && errors.trade.message}
+  </span>
+</div>
+<div className="sm:col-span-2 w-[100%]">
+  <div className="mt-2 flex items-center gap-2">
+    <input
+      {...register("marketing", validations.marketing)}
+      id="marketing"
+      type="checkbox"
+      className="border border-gray-300 rounded-md shadow-sm focus:border-sky-500 focus:ring-sky-500"
+    />
+    <label htmlFor="marketing" className="text-sm font-medium text-[var(--secondary-header-color)]">
+      Oświadczam, że wyrażam zgodę na otrzymywanie informacji marketingowych *
+    </label>
+  </div>
+  <span className="text-red-600" >
+    {errors?.marketing && errors.marketing.message}
+  </span>
+</div>
                 <div className="flex justify-end sm:col-span-2">
                     <Button type="submit" width="12rem">
                         Wyceń transport

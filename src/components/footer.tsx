@@ -13,22 +13,22 @@ const Footer = ({type}: {type: "front" | "panel"}): React.ReactNode => {
         <Header size="big">A1 Express</Header>
       </a>
       <div className="mt-6 lg:max-w-sm">
-        <p className="text-sm text-gray-800">
+        <p className="text-sm text-[var(--secondary-header-color)]">
          Jakiś fajny tekst
         </p>
-        <p className="mt-4 text-sm text-gray-800">
+        <p className="mt-4 text-sm text-[var(--secondary-header-color)]">
         Jakiś kolejny fajny tekst?
         </p>
       </div>
     </div>
     <div className="space-y-2 text-sm">
-      <p className="text-base font-bold tracking-wide text-gray-900">Kontakt</p>
+      <p className="text-base font-bold tracking-wide text-[var(--secondary-header-color)]">Kontakt</p>
       <div className="flex">
-        <p className="mr-1 text-gray-800">Email:</p>
+        <p className="mr-1 text-[var(--secondary-header-color)]">Email:</p>
         <a href="mailto:biuro@a1express.pl" aria-label="Our email" title="Our email" className="transition-colors duration-300 text-blue-400 hover:text-purple-700">biuro@a1express.pl</a>
       </div>
       <div className="flex">
-        <p className="mr-1 text-gray-800">Telefon:</p>
+        <p className="mr-1 text-[var(--secondary-header-color)]">Telefon:</p>
         <p aria-label="Nasz NIP" className="transition-colors duration-300 text-blue-400">
           +48 797-581-381
         </p>
@@ -36,20 +36,20 @@ const Footer = ({type}: {type: "front" | "panel"}): React.ReactNode => {
 
     </div>
     <div>
-      <p className="mt-4 text-sm text-gray-500">
+      <p className="mt-4 text-sm text-[var(--primary-text-color)]">
         Jakieś socjale?
       </p>
     </div>
   </div>
   <div className="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
-    <p className="text-sm text-gray-600">
+    <p className="text-sm text-[var(--primary-text-color)]">
       © Copyright 2025 A1 Express. Wszystkie prawa zastrzeżone.
     </p>
     <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
           {documents.map((doc) => {
             return (
               <li key={doc.id}>
-                <Link href={doc.id} className="text-sm text-gray-600 transition-colors duration-300 hover:text-yellow-500">
+                <Link href={doc.id} className="text-sm text-[var(--primary-text-color)] transition-colors duration-300 hover:text-[var(--primary-color)]">
                   {doc.title}
                 </Link>
               </li>

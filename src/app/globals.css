@@ -3,10 +3,14 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary-color: #add8e6; /* Light Blue */
-  --primary-color-dark: #87c0d6; /* Slightly darker Light Blue */
-  --secondary-color: #90ee90; /* Light Green */
-  --secondary-color-dark: #77c677; /* Slightly darker Light Green */
+  --primary-color: #add8e6;
+  --primary-color-dark: #87c0d6;
+  --secondary-color: #90ee90;
+  --secondary-color-dark: #77c677;
+  --primary-header-color: var(--color-gray-900);
+  --secondary-header-color: var(--color-gray-800);
+  --primary-text-color: var(--color-gray-700);
+  --buton-hover-color: var(--color-gray-200);
 }
 
 @theme inline {
@@ -24,6 +28,10 @@
     --primary-color-dark: #4f8a8c; /* Slightly darker shade for dark mode */
     --secondary-color: #32cd32; /* Adjusted darker green for dark mode */
     --secondary-color-dark: #28a828; /* Slightly darker shade for dark mode */
+    --primary-header-color: var(--color-gray-100);
+    --secondary-header-color: var(--color-gray-200);
+    --primary-text-color: var(--color-gray-300);
+    --buton-hover-color: var(--color-gray-800);
   }
 }
 
