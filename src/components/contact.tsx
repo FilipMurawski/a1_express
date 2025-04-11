@@ -71,7 +71,7 @@ const Contact = () => {
     }, [isSubmitSuccessful])
     
     return (
-        <div className="mt-12 min-w-[90%] md:min-w-[50%]">
+        <div className="pt-18 min-w-[90%] md:min-w-[50%]">
             <form className="flex items-start justify-center flex-col gap-8" onSubmit={handleSubmit(onSubmit)}>
                 <div className="sm:col-span-2 text-center min-w-[50%]">
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 ">Imię i nazwisko / Nazwa firmy</label>
@@ -102,7 +102,7 @@ const Contact = () => {
                 </div>
                 <div className="flex justify-end sm:col-span-2">
                     <Button type="submit" width="12rem">
-                        Uzyskaj wycenę
+                        Wyceń transport
                     </Button>
                 </div>
                 { showAlert &&

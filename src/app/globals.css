@@ -3,6 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-color: #add8e6; /* Light Blue */
+  --primary-color-dark: #87c0d6; /* Slightly darker Light Blue */
+  --secondary-color: #90ee90; /* Light Green */
+  --secondary-color-dark: #77c677; /* Slightly darker Light Green */
 }
 
 @theme inline {
@@ -16,6 +20,10 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --primary-color: #5f9ea0; /* Adjusted darker blue for dark mode */
+    --primary-color-dark: #4f8a8c; /* Slightly darker shade for dark mode */
+    --secondary-color: #32cd32; /* Adjusted darker green for dark mode */
+    --secondary-color-dark: #28a828; /* Slightly darker shade for dark mode */
   }
 }
 
