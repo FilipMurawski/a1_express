@@ -4,10 +4,10 @@ declare type header = {
   };
 
 export const headers: header[] = [
-  { title: "Strona główna", id: "home" },
-    { title: "O nas", id: "dlaczego" },
-    { title: "Nasze usługi", id: "offer" },
+  { title: "Start", id: "home" },
+    { title: "Dlaczego", id: "dlaczego" },
     { title: "Flota", id: "flota" },
+    { title: "O nas", id: "offer" },
     { title: "Dane kontaktowe", id: "kontakt" },
     { title: "Formularz kontaktowy", id: "form" },
 ]

@@ -7,7 +7,7 @@ const Header = ({size, children, classt}: {size: "small" | "big"; children: stri
     ) 
     else {
         return (
-        <h3 className={`${classt} text-base sm:text-lg md:text-xl lg:text-2xl text-[var(--secondary-header-color)] max-w-3xl leading-relaxed`}>
+        <h3 className={` text-base sm:text-lg md:text-xl lg:text-2xl text-[var(--secondary-header-color)] max-w-3xl leading-relaxed ${classt}`}>
         {children}
         </h3>
         )
