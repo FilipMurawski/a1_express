@@ -4,18 +4,6 @@ import React, { useState } from 'react';
 const Page = () => {
     // State to manage the current language
     const [language, setLanguage] = useState<'PL' | 'EN'>('PL');
-
-    // Document links for both languages
-    const documents = {
-      PL: {
-        display: 'A1 OGÓLNE WARUNKI WSPÓŁPRACY - ZLECENIOBIORCA (PL)',
-        download: '/A1 OGÓLNE WARUNKI WSPÓŁPRACY - ZLECENIODAWCA.pdf',
-      },
-      EN: {
-        display: 'A1 GENERAL TERMS OF COOPERATION - CONTRACTOR (EN)',
-        download: '/A1 OGÓLNE WARUNKI WSPÓŁPRACY - ZLECENIODAWCA (EN).pdf',
-      },
-    };
   
     // Toggle language handler
     const toggleLanguage = () => {
