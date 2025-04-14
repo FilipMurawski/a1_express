@@ -91,6 +91,7 @@ const Slider = ({ trucks }: { trucks: truck[] }) => {
         ))}
     </div>
     <button
+    title='Previous'
         ref={prevButtonRef}
         className="absolute left-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
     >
@@ -106,6 +107,7 @@ const Slider = ({ trucks }: { trucks: truck[] }) => {
         </span>
     </button>
     <button
+    title='Next'
         ref={nextButtonRef}
         className="absolute right-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
     >
