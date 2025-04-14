@@ -71,7 +71,7 @@ const Navbar = ({ headers }: { headers: header[] }) => {
         </ul>
 
         <Hamburger active={isMenuOpen} setActive={setIsMenuOpen} />
-        <Button type="button" reference="#contact" width={"12rem"}>
+        <Button type="button" width={"12rem"} reference="#form">
           Wyceń transport
         </Button>
       </div>

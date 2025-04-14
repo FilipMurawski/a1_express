@@ -26,16 +26,13 @@ const Slider = ({ trucks }: { trucks: truck[] }) => {
             defaultPosition: 0,
             interval: 10000,
             indicators: {
-                activeClasses: 'bg-gray-700 dark:bg-gray-100',
-                inactiveClasses: 'bg-gray-700 dark:bg-gray-100/50 hover:bg-gray-600 dark:hover:bg-gray-300',
+                activeClasses: 'bg-[var(--primary-slider-color)]',
+                inactiveClasses: 'bg-[var(--secondary-slider-color)]',
                 items: trucks.map((_, index) => ({
                     position: index,
                     el: document.getElementById(`carousel-indicator-${index}`) as HTMLElement,
                 })),
-            },
-            onNext: () => console.log('Next slide'),
-            onPrev: () => console.log('Previous slide'),
-            onChange: () => console.log('Slide changed'),
+            }
         };
 
         const carousel = new Carousel(carouselRef.current, items, options);
@@ -63,7 +60,7 @@ const Slider = ({ trucks }: { trucks: truck[] }) => {
                 className={`hidden duration-700 ease-in-out h-full`}
             >
                 <div className="w-[100%] flex items-stretch justify-center h-full">
-                    <li className="p-6 md:p-8 border border-[var(--primary-slider-border-color)] rounded-3xl h-full bg-[var(--foreground)] shadow-2xl shadow-gray-600/10 list-none w-[90%] md:w-[60%] text-sm md:text-base flex flex-col justify-between">
+                    <div className="p-6 md:p-8 border border-[var(--primary-slider-border-color)] rounded-3xl h-full bg-[var(--primary-slider-bg-color)] shadow-2xl shadow-gray-600/10 list-none w-[90%] md:w-[60%] text-sm md:text-base flex flex-col justify-between">
                         <div className="flex flex-col gap-4 items-start">
                             <h6 className="text-lg text-[var(--primary-slider-color)] text-start font-bold">
                                 {truck.name}
@@ -78,7 +75,7 @@ const Slider = ({ trucks }: { trucks: truck[] }) => {
                         />
                         </div>
 
-                    </li>
+                    </div>
                 </div>
             </div>
         ))}
@@ -97,7 +94,7 @@ const Slider = ({ trucks }: { trucks: truck[] }) => {
         ref={prevButtonRef}
         className="absolute left-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
     >
-        <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[var(--foreground)] text-[var(--background)]">
+        <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[var(--primary-slider-bg-color)] text-[var(--secondary-slider-color)]">
             <svg
                 fill='currentColor'
                 xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +109,7 @@ const Slider = ({ trucks }: { trucks: truck[] }) => {
         ref={nextButtonRef}
         className="absolute right-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
     >
-        <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[var(--foreground)] text-[var(--background)]">
+        <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[var(--primary-slider-bg-color)] text-[var(--secondary-slider-color)]">
             <svg
                 fill='currentColor'
                 xmlns="http://www.w3.org/2000/svg"

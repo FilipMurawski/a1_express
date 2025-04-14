@@ -13,11 +13,11 @@ const Footer = ({type}: {type: "front" | "panel"}): React.ReactNode => {
         <Header size="big">A1 Express</Header>
       </a>
       <div className="mt-6 lg:max-w-sm">
-        <p className="text-sm text-[var(--secondary-header-color)]">
-         Jakiś fajny tekst
+        <p className="text-sm text-[var(--secondary-header-color)] font-bold">
+        Zyskaj dedykowany zespół ekspertów od transportu.
         </p>
         <p className="mt-4 text-sm text-[var(--secondary-header-color)]">
-        Jakiś kolejny fajny tekst?
+        Zacznij współpracę i zobacz, jak prosta może być logistyka dopasowana do Twoich potrzeb.
         </p>
       </div>
     </div>
@@ -34,11 +34,6 @@ const Footer = ({type}: {type: "front" | "panel"}): React.ReactNode => {
         </p>
       </div>
 
-    </div>
-    <div>
-      <p className="mt-4 text-sm text-[var(--primary-text-color)]">
-        Jakieś socjale?
-      </p>
     </div>
   </div>
   <div className="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">

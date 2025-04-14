@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #131212;
   --primary-color: #add8e6;
   --primary-color-dark: #87c0d6;
   --secondary-color: #90ee90;
@@ -11,9 +11,10 @@
   --secondary-header-color: var(--color-gray-800);
   --primary-text-color: var(--color-gray-700);
   --buton-hover-color: var(--color-gray-200);
-  --primary-slider-color: var(--color-gray-300);
-  --secondary-slider-color: var(--color-gray-400);
-  --primary-slider-border-color: var(--color-gray-900);
+  --primary-slider-color: var(--color-gray-700);
+  --secondary-slider-color: var(--color-gray-600);
+  --primary-slider-border-color: var(--color-gray-300);
+  --primary-slider-bg-color: var(--color-gray-200);
 }
 
 @theme inline {
@@ -38,6 +39,7 @@
     --primary-slider-color: var(--color-gray-800);
     --secondary-slider-color: var(--color-gray-600);
     --primary-slider-border-color: var(--color-gray-100);
+    --primary-slider-bg-color: var(--color-gray-200);
   }
 }
 

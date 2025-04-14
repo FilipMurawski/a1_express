@@ -10,7 +10,7 @@ const Button = ({
   children: React.ReactNode;
   type: "button" | "submit" | "reset" | undefined;
   width: number | string;
-  onClick?: () => void;
+  onClick?: (() => void)
   reference?: string;
 }>) => {
   return (
