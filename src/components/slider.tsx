@@ -52,14 +52,14 @@ const Slider = ({ trucks }: { trucks: truck[] }) => {
 
     return (
         <div id="carousel-example" ref={carouselRef} className="relative w-full lg:w-[50%]">
-    <div className="relative overflow-clip rounded-lg min-h-[50vh]">
+    <div className="relative overflow-clip rounded-lg min-h-[70vh] sm:min-h-[50vh]">
         {trucks.map((truck, index) => (
             <div
                 key={index}
                 id={`carousel-item-${index}`}
                 className={`hidden duration-700 ease-in-out h-full`}
             >
-                <div className="w-[100%] flex items-stretch justify-center h-full">
+                <div className="w-full scale-90 sm:scale-100 flex items-stretch justify-center h-full">
                     <div className="p-6 md:p-8 border border-[var(--primary-slider-border-color)] rounded-3xl h-full bg-[var(--primary-slider-bg-color)] shadow-2xl shadow-gray-600/10 list-none w-[90%] md:w-[60%] text-sm md:text-base flex flex-col justify-between">
                         <div className="flex flex-col gap-4 items-start">
                             <h6 className="text-lg text-[var(--primary-slider-color)] text-start font-bold">
@@ -93,7 +93,7 @@ const Slider = ({ trucks }: { trucks: truck[] }) => {
     <button
     title='Previous'
         ref={prevButtonRef}
-        className="absolute left-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
+        className="absolute -left-8 sm:left-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
     >
         <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[var(--primary-slider-bg-color)] text-[var(--secondary-slider-color)]">
             <svg
@@ -109,7 +109,7 @@ const Slider = ({ trucks }: { trucks: truck[] }) => {
     <button
     title='Next'
         ref={nextButtonRef}
-        className="absolute right-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
+        className="absolute -right-8 sm:right-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
     >
         <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[var(--primary-slider-bg-color)] text-[var(--secondary-slider-color)]">
             <svg

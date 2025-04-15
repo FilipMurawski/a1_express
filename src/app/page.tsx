@@ -15,12 +15,12 @@ export default function Home() {
     <Navbar headers={headers}/>
 <section id="home" className="bg-gray-900 h-[60vh] sm:h-[80vh] md:h-screen flex flex-col">
   {/* Image Section */}
-  <div className="relative w-full flex-grow mt-16">
+  <div className="relative w-full flex-grow mt-14 md:mt-16">
     <Image
       src="/Tapeta.jpg"
       alt="Truck on the road"
       fill
-      className="w-full md:object-cover object-contain"
+      className="w-full object-cover sm:object-center"
     />
   </div>
 
@@ -36,11 +36,11 @@ export default function Home() {
 </section>
     <Section id="dlaczego" wrap="no-wrap">     
     <Image src="/dlaczego.jpg" alt="handshake" className="w-[100%] lg:w-[60%] min-w-[16rem] lg:-translate-x-20  -translate-y-17 lg:translate-y-0 scale-120" width={1200} height={600}/>
-      <div className="w-[100%] lg:w-[55%] min-w-52 flex justify-center items-center space-y-10 flex-col">
+      <div className="w-[100%] lg:w-[55%] flex justify-center items-center space-y-10 flex-col">
         <Header size="big"> Dlaczego warto z nami współpracować?</Header>
         <Header size="small">Bezpieczeństwo Twojego towaru to nasz priorytet. Gwarantujemy pełne zabezpieczenie ładunku na każdym etapie transportu, abyś miał pewność, że dotrze do celu w nienaruszonym stanie.</Header>
-        <div className="flex justify-center items-start sm:space-x-[10%] space-y-[10%] w-[80%] text-[var(--primary-text-color)] flex-col sm:flex-row sm:space-y-0 ">
-          <div className="flex justify-center flex-col items-center min-w-[calc(100%/4)] lg:min-w-[calc(84%/4)] gap-4">
+        <div className="flex justify-center items-start w-full sm:space-x-[10%] space-y-[10%] sm:w-[80%] text-[var(--primary-text-color)] flex-col sm:flex-row sm:space-y-0 ">
+          <div className="flex justify-center flex-col items-center w-full sm:min-w-[calc(100%/4)] lg:min-w-[calc(84%/4)] gap-4">
           <Icon viewbox="0 0 640 512" d="M278.6 9.4c-12.5-12.5-32.8-12.5-45.3 0l-64 64c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l9.4-9.4L224 224l-114.7 0 9.4-9.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-64 64c-12.5 12.5-12.5 32.8 0 45.3l64 64c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-9.4-9.4L224 288l0 114.7-9.4-9.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l64 64c12.5 12.5 32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-9.4 9.4L288 288l114.7 0-9.4 9.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3l-64-64c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l9.4 9.4L288 224l0-114.7 9.4 9.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-64-64z"/> 
           <p>Elastyczność – Nasze transporty krajowe i międzynarodowe są dostosowane do specyfiki Twojej branży i indywidualnych potrzeb.</p>
           </div>
