@@ -1,6 +1,7 @@
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import Hero from "@/components/hero";
 import Icon from "@/components/icon";
 import { Navbar } from "@/components/navbar";
 import { Section } from "@/components/section";
@@ -13,27 +14,7 @@ export default function Home() {
   return (
     <>
     <Navbar headers={headers}/>
-<section id="home" className="bg-gray-900 h-[60vh] sm:h-[80vh] md:h-screen flex flex-col">
-  {/* Image Section */}
-  <div className="relative w-full flex-grow mt-14 md:mt-16">
-    <Image
-      src="/Tapeta.jpg"
-      alt="Truck on the road"
-      fill
-      className="w-full object-cover sm:object-center"
-    />
-  </div>
-
-  {/* Text Section */}
-  <div className="w-full bg-gray-900 text-center p-5 pt-0 sm:pt-5">
-    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold">
-      A1 Express
-    </h1>
-    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-100 font-medium mt-4">
-      Bezpieczny i terminowy transport dostosowany do Twoich potrzeb
-    </h2>
-  </div>
-</section>
+    <Hero/>
     <Section id="dlaczego" wrap="no-wrap">     
     <Image src="/dlaczego.jpg" alt="handshake" className="w-[100%] lg:w-[60%] min-w-[16rem] lg:-translate-x-20  -translate-y-17 lg:translate-y-0 scale-120" width={1200} height={600}/>
       <div className="w-[100%] lg:w-[55%] flex justify-center items-center space-y-10 flex-col">
