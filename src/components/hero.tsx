@@ -16,7 +16,7 @@ const Hero = () => {
 
             {/* Text Section */}
             <div
-                className="w-full bg-gray-900 text-center p-5 pt-0 sm:pt-5 xl:absolute xl:top-1/3 xl:left-1/4 xl:transform xl:-translate-y-1/2 xl:-translate-x-2/5 xl:text-left xl:max-w-[30%] xl:rounded-2xl"
+                className="w-full bg-gray-900 text-center p-5 pt-0 sm:pt-5 xl:hidden xl:top-1/3 xl:left-1/4 xl:transform xl:-translate-y-1/2 xl:-translate-x-2/5 xl:text-left xl:max-w-[30%] xl:rounded-2xl"
             >
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold">
                     A1 Express
