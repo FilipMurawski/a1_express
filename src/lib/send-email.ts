@@ -24,7 +24,7 @@ export async function sendMail({from = "Acme <onboarding@resend.dev>", to = "del
       subject: "Formularz kontaktowy od GoldSkill",
       html: `
         <div style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">
-          <h2 style="color: #FFCC00;">Formularz kontaktowy od GoldSkill</h2>
+          <h2 style="color: #FFCC00;">Formularz kontaktowy od A1 Express</h2>
           <p><strong>Imię i nazwisko:</strong> ${name}</p>
           <p><strong>Email:</strong> ${Contactemail}</p>
           <p><strong>Wiadomość:</strong></p>

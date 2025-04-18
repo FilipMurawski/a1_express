@@ -3,7 +3,7 @@
 import Button from "./button";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useEffect, useState } from "react";
-// import { sendMail } from "@/lib/send-email";
+import { sendMail } from "@/lib/send-email";
 
 type Inputs = {
     name: string,
@@ -25,7 +25,7 @@ const Contact = () => {
     })
     const onSubmit: SubmitHandler<Inputs> = (data) => {
         // Handle proper submit here
-        // sendMail({from: "no-reply@goldskill.pl", to: "GoldSkill.TradeGroup@gmail.com",subject: "Formularz kontaktowy od GoldSkill", type: "contact", message: data.message, Contactemail: data.email, name: data.name})
+        sendMail({from: "no-reply@a1express.pl", to: "biuro@a1express.pl",subject: "Formularz kontaktowy od A1Express", type: "contact", message: data.message, Contactemail: data.email, name: data.name})
         console.log(data);
         reset()    
     };
