@@ -9,7 +9,7 @@ const Footer = ({type}: {type: "front" | "panel"}): React.ReactNode => {
   <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
     <div className="sm:col-span-2">
       <a href="#home" aria-label="Go home" title="Company" className="inline-flex items-center">
-        <Image className="w-12 h-12 mr-4" src="/logo.jpg" alt="Logo Goldskill" width={48} height={48}/>
+        <Image className="w-12 h-12 mr-4" src="/logo.jpg" alt="Logo A1Express" width={48} height={48}/>
         <Header size="big">A1 Express</Header>
       </a>
       <div className="mt-6 lg:max-w-sm">
