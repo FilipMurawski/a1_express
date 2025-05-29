@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "A1 Express",
-  description: "Opis",
+  description: "Bezpieczny i terminowy transport dostosowany do Twoich potrzeb",
 };
 
 export default function RootLayout({
