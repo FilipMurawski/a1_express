@@ -11,7 +11,6 @@ Welcome to the repository for [A1 Express](https://www.a1express.pl) – a moder
 - **React** – Component-based UI development
 - **TypeScript** – Type-safe JavaScript
 - **Tailwind CSS** – Utility-first CSS framework
-- **Resend** – Transactional email sending
 
 ## 📂 Features
 
@@ -35,10 +34,6 @@ src/
 public ├── # Images and static files
 
 
-## ✉️ Email Integration
-
-Emails are sent using [Resend](https://resend.com), a reliable email API for developers. Ensure you add your API key to `.env.local`:
-RESEND_API_KEY=your_resend_api_key_here
 
 ## 🛠️ Getting Started
 
@@ -53,9 +48,6 @@ cd a1express
 ```bash
 npm install
 ```
-4. **Set up environment variables**
-```bash
-RESEND_API_KEY=your_resend_api_key
 ```
 5. **Run the development server**
 ```bash
