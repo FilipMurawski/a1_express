@@ -59,9 +59,8 @@ const Navbar = ({ headers }: { headers: header[] }) => {
           {headers.map((header) => (
             <li
               key={header.id}
-              className={`text-gray-300 hover:text-[var(--secondary-color)] font-medium transition duration-200 active:text-[var(--secondary-color)] ${
-                activeSection === header.id ? "text-[var(--secondary-color)]" : ""
-              }`}
+              className={`text-gray-300 hover:text-[var(--secondary-color)] font-medium transition duration-200 active:text-[var(--secondary-color)] ${activeSection === header.id ? "text-[var(--secondary-color)]" : ""
+                }`}
             >
               <a href={`#${header.id}`} onClick={(e) => handleSmoothScroll(e, header.id)}>
                 {header.title}
@@ -71,8 +70,8 @@ const Navbar = ({ headers }: { headers: header[] }) => {
         </ul>
 
         <Hamburger active={isMenuOpen} setActive={setIsMenuOpen} />
-        <Button type="button" width={"12rem"} reference="#form">
-          Wyceń transport
+        <Button type="button" width={"14rem"} reference="mailto:biuro@a1express.pl">
+          Skontaktuj się z nami
         </Button>
       </div>
 
@@ -83,9 +82,8 @@ const Navbar = ({ headers }: { headers: header[] }) => {
               key={header.id}
               href={`#${header.id}`}
               onClick={(e) => handleSmoothScroll(e, header.id)}
-              className={`text-gray-300 scroll-smooth hover:text-[var(--secondary-color)] font-medium transition duration-200 active:text-[var(--secondary-color)] ${
-                activeSection === header.id ? "text-[var(--secondary-color)]" : ""
-              }`}
+              className={`text-gray-300 scroll-smooth hover:text-[var(--secondary-color)] font-medium transition duration-200 active:text-[var(--secondary-color)] ${activeSection === header.id ? "text-[var(--secondary-color)]" : ""
+                }`}
             >
               {header.title}
             </a>
